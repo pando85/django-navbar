@@ -8,6 +8,7 @@ url_re = re.compile(r'^(https?://([a-zA-Z0-9]+\.)+[a-zA-Z0-9]([:@][a-zA-Z0-9@%-_
 class NavBarEntryAdminForm(forms.ModelForm):
     class Meta:
         model = NavBarEntry
+        fields = '__all__'
 
     def clean_url(self):
         url = self.cleaned_data["url"]
