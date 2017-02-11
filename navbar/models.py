@@ -46,7 +46,7 @@ class NavBarEntry(models.Model):
     user_type = models.CharField(_('user login type'), max_length=1,
                                  choices=USER_TYPE_CHOICES,
                                  default=USER_TYPE_CHOICES[0][0])
-    groups    = models.ManyToManyField(Group, null=True, blank=True)
+    groups    = models.ManyToManyField(Group, blank=True)
 
     objects = models.Manager()
     top     = NavBarRootManager()
